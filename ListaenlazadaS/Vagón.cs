@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ListaenlazadaS
 {
-    class Vagón
+    class Vagon
     {
         public int Dato { get; set; }
-        public Vagón sig {  get; set; }
+        public Vagon sig {  get; set; }
 
-        public Vagón(int dato)
+        public Vagon(int dato)
         {
             Dato = dato;
         }
-        public Vagón()
+        public Vagon()
         {
         }
     }
