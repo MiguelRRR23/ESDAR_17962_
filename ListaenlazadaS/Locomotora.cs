@@ -16,7 +16,6 @@ namespace ListaenlazadaS
             if (this.Primero == null) // caso 1 locomotora sola
             {
                 this.Primero = nuevo;
-
             }
             else //caso 2
             {
@@ -25,8 +24,7 @@ namespace ListaenlazadaS
                 nuevo.sig = this.Primero;
 
                 this.Primero = nuevo;
-
-                
+              
             }
 
         }
@@ -63,5 +61,27 @@ namespace ListaenlazadaS
             return listaVag;
         }
 
+        public void EliminarUltimo()
+        {
+            if (this.Primero == null) // Caso 1: La lista está vacía
+            {
+                return;
+            }
+
+            if (this.Primero.sig == null) // Caso 2: Solo hay un vagón
+            {
+                this.Primero = null; 
+                return;
+            }
+          
+            Vagón tmp = this.Primero;
+            while (tmp.sig.sig != null) // Recorremos hasta el penúltimo vagón
+            {
+                tmp = tmp.sig;
+            }
+            tmp.sig = null; // Eliminamos el último vagón
+        }
+
+       
     }
 }

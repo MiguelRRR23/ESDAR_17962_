@@ -15,7 +15,6 @@ namespace ListaenlazadaS
         {
             Dato = dato;
         }
-
         public Vagón()
         {
         }
